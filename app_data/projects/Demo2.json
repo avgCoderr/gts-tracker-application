@@ -1,0 +1,14 @@
+{
+  "projectName": "Demo2",
+  "gpsFrequency": 5,
+  "taxonomy": [
+    {
+      "className": "abc",
+      "attributes": [
+        "1",
+        "23",
+        "5"
+      ]
+    }
+  ]
+}

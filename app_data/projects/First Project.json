@@ -1,0 +1,27 @@
+{
+  "projectName": "First Project",
+  "gpsFrequency": 5,
+  "taxonomy": [
+    {
+      "className": "Weather",
+      "attributes": [
+        "Sunny",
+        "Rainy"
+      ]
+    },
+    {
+      "className": "Traffic",
+      "attributes": [
+        "Heavy",
+        "Light"
+      ]
+    },
+    {
+      "className": "Lane",
+      "attributes": [
+        "Intersection",
+        "Diversion"
+      ]
+    }
+  ]
+}

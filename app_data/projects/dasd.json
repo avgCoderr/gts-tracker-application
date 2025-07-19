@@ -1,0 +1,14 @@
+{
+  "projectName": "dasd",
+  "gpsFrequency": 123,
+  "taxonomy": [
+    {
+      "className": "123",
+      "attributes": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ]
+}

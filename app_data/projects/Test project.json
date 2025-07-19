@@ -1,0 +1,24 @@
+{
+  "projectName": "Test project",
+  "gpsFrequency": 5,
+  "taxonomy": [
+    {
+      "className": "new_abc",
+      "attributes": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "className": "xyz",
+      "attributes": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  ]
+}
