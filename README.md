@@ -1,7 +1,11 @@
 # GPS Tracker Application (GTA)
 
-A desktop GPS tracking application built with PyQt5. 
-It allows you to create multiple projects with custom taxonomies, log GPS routes with metadata tagging, and view route logs.
+A desktop GPS tracking application built with PyQt5. It allows you to create multiple projects with custom taxonomies, log GPS routes with metadata tagging, and view route logs.
+
+* The future goals would be:
+  * Provide a Map View of the Route - Either through GUI or Google Maps
+* Start logging real-time GPS Coordinates
+
 
 ---
 
