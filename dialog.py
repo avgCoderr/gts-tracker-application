@@ -200,7 +200,26 @@ class EditProjectDialog(QDialog):
 
     def save_changes(self):
         try:
-            self.project_data["gpsFrequency"] = int(self.freq_input.text())
+            freq_text = self.freq_input.text().strip()
+            if not freq_text.isdigit():
+                QMessageBox.warning(self, "Invalid Frequency", "GPS frequency must be a number.")
+                return
+            freq = int(freq_text)
+            if not (5 <= freq <= 20):
+                QMessageBox.warning(self, "Invalid Frequency", "GPS frequency must be between 5 and 20 seconds.")
+                return
+            if not self.taxonomy:
+                QMessageBox.warning(self, "Invalid Taxonomy", "You must add at least one taxonomy class.")
+                return
+            for entry in self.taxonomy:
+                if not entry["className"].strip():
+                    QMessageBox.warning(self, "Invalid Class", "Each taxonomy class must have a valid name.")
+                    return
+                if not entry["attributes"]:
+                    QMessageBox.warning(self, "Missing Attributes", f"Class '{entry['className']}' must have at least one attribute.")
+                    return
+            
+            self.project_data["gpsFrequency"] = freq
             self.project_data["taxonomy"] = self.taxonomy
 
             with open(self.project_path, "w") as f:
