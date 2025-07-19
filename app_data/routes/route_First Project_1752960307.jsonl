@@ -1,0 +1,8 @@
+{"tick_timestamp": 1752960313, "latitude": 28.644862573985254, "longitude": 77.21674169783118, "meta_data": {}}
+{"tick_timestamp": 1752960318, "latitude": 28.645664384455582, "longitude": 77.21729905449328, "meta_data": {}}
+{"tick_timestamp": 1752960323, "meta_submitted_at": 1752960318, "latitude": 28.64548024876388, "longitude": 77.21690087681488, "meta_data": {"Weather": "Sunny", "Traffic": "Heavy", "Lane": "Intersection"}}
+{"tick_timestamp": 1752960328, "meta_submitted_at": 1752960323, "latitude": 28.64492732925622, "longitude": 77.21748316476459, "meta_data": {"Weather": "Sunny"}}
+{"tick_timestamp": 1752960333, "meta_submitted_at": 1752960328, "latitude": 28.64513119871821, "longitude": 77.21711315217546, "meta_data": {"Traffic": "Heavy"}}
+{"tick_timestamp": 1752960338, "meta_submitted_at": 1752960333, "latitude": 28.64577251764856, "longitude": 77.21724059170177, "meta_data": {"Lane": "Intersection"}}
+{"tick_timestamp": 1752960343, "latitude": 28.645693189743117, "longitude": 77.21708843571538, "meta_data": {}}
+{"tick_timestamp": 1752960348, "latitude": 28.64529714576255, "longitude": 77.21695177076302, "meta_data": {}}

@@ -1,5 +1,0 @@
-{"tick_timestamp": 1752955110, "latitude": 28.644939532604482, "longitude": 77.21767091584812, "meta_data": {}}
-{"tick_timestamp": 1752955115, "meta_submitted_at": 1752955114, "latitude": 28.645333346597, "longitude": 77.21713298771668, "meta_data": {"Weather": "Sunny", "Traffic": "Heavy", "Lane": "Intersection"}}
-{"tick_timestamp": 1752955120, "latitude": 28.645607799312486, "longitude": 77.2170009169183, "meta_data": {}}
-{"tick_timestamp": 1752955125, "latitude": 28.645477044028578, "longitude": 77.21684704542582, "meta_data": {}}
-{"tick_timestamp": 1752955130, "meta_submitted_at": 1752955125, "latitude": 28.645579508745527, "longitude": 77.21687681642209, "meta_data": {"Weather": "Rainy", "Traffic": "Light", "Lane": "Diversion"}}

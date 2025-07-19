@@ -1,17 +1,15 @@
-import sys
 import os
-import glob
 import json
 import time
 from random import random
 
 from PyQt5.QtWidgets import (
-    QFormLayout, QApplication, QMainWindow, QDialog, QVBoxLayout, QLabel, QListWidget, QPushButton, QLineEdit,
-    QHBoxLayout, QMessageBox, QWidget, QDialogButtonBox, QListWidgetItem, QInputDialog, QTextEdit
+    QFormLayout, QDialog, QVBoxLayout, QLabel, QListWidget, QPushButton, QLineEdit,
+    QHBoxLayout, QMessageBox, QDialogButtonBox, QInputDialog
 )
 
 from PyQt5.QtGui import QIntValidator
-from PyQt5.QtCore import QTimer, QDateTime
+from PyQt5.QtCore import QTimer
 
 class ProjectDialog(QDialog):
     def __init__(self, parent=None):
@@ -221,6 +219,7 @@ class RouteLoggerDialog(QDialog):
         self.freq = project_data["gpsFrequency"] * 1000  # ms for QTimer
         self.taxonomy = project_data["taxonomy"]
         self.meta_stack = []
+        self.current_lat, self.current_lon = None, None
 
         ts = int(time.time())
         route_dir = os.path.join("app_data", "routes")
@@ -320,7 +319,6 @@ class RouteLoggerDialog(QDialog):
 
         QMessageBox.information(self, "Meta Submitted", "Your meta data has been recorded.")
 
-
     def start_logging(self):
         open(self.current_route_file, "a").close()
         self.is_logging = True
@@ -328,6 +326,10 @@ class RouteLoggerDialog(QDialog):
         self.start_btn.setEnabled(False)
         self.stop_btn.setEnabled(True)
         self.update_submit_button_state()
+
+    def update_location(self, lat, lon):
+        self.current_lat = lat
+        self.current_lon = lon
 
     def stop_logging(self):
         self.is_logging = False
@@ -365,5 +367,5 @@ class RouteLoggerDialog(QDialog):
         self.log_view.addItem(f"{log['tick_timestamp']}: {log['meta_data']}")
 
     def get_current_location(self):
-        # Replace with actual GPS integration
+        # Simulated coordinates around a central point (Delhi)
         return 28.6448 + random() * 0.001, 77.2167 + random() * 0.001
