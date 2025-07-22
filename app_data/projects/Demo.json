@@ -1,5 +1,22 @@
 {
   "projectName": "Demo",
   "gpsFrequency": 5,
-  "taxonomy": []
+  "taxonomy": [
+    {
+      "className": "Weather",
+      "attributes": [
+        "Rainy",
+        "Cloudy",
+        "Sunny"
+      ]
+    },
+    {
+      "className": "Traffic",
+      "attributes": [
+        "Heavy",
+        "Moderate",
+        "Light"
+      ]
+    }
+  ]
 }

@@ -13,7 +13,7 @@ from dialog import ProjectDialog, EditProjectDialog, RouteLoggerDialog
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("GPS Tracker Application - GTA")
+        self.setWindowTitle("GPS Meta Tagger - GMT")
 
         layout = QHBoxLayout()
 
@@ -186,6 +186,14 @@ class MainWindow(QMainWindow):
         if dialog.exec_():
             QMessageBox.information(self, "Updated", "Project updated successfully.")
             self.refresh_project_list()
+
+            # Find and re-select the edited item to reload its details
+            for i in range(self.project_list.count()):
+                item = self.project_list.item(i)
+                if item.data(1000) == project_path:
+                    self.project_list.setCurrentItem(item)  # triggers load_project_details
+                    self.load_project_details(item)         # explicitly reloads UI
+                    break
             
     def refresh_project_list(self):
         self.load_projects()
